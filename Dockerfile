@@ -1,5 +1,6 @@
 FROM registry.access.redhat.com/ubi8:8.8-1009
 
+# renovate: datasource=github-releases depName=anchore/syft
 ARG syft_version=0.85.0
 
 

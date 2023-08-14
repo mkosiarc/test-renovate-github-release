@@ -4,19 +4,12 @@
     "config:base"
   ],
   "regexManagers": [
-  {
-    "fileMatch": ["/Dockerfile$"],
-    "matchStrings": [
-      "ARG syft_version=[\"']?(?<currentValue>.+?)[\"']?\\s+"
-    ],
-    "datasourceTemplate": "github-releases",
-    "depNameTemplate": "anchore/syft",
-  }
-  ],
-  "packageRules": [
-  {
-    "matchDatasources": ["github-releases"],
-    "matchDepNames": ["anchore/syft"],
-  }
+    {
+      "description": "Do stuff",
+      "fileMatch": ["(^|/)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.+?) depName=(?<depName>.+?)(?: (?:packageName)=(?<packageName>.+?))?(?: versioning=(?<versioning>.+?))?\\s*-?\\s*plugin: ('|\")?.*:(?<currentValue>.+?)('|\")?\\s"
+      ]
+    }
   ]
 }
