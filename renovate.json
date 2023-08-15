@@ -1,12 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "forkProcessing": "enabled",
-  "baseBranches": ["dev"],
-  "rebaseWhen": "behind-base-branch",
-  "dependencyDashboard": false,
-  "labels": ["dependencies"],
-  "commitMessagePrefix": "",
-  "commitMessageTopic": "{{depName}}",
   "regexManagers": [
     {
       "fileMatch": ["/Dockerfile$"],
