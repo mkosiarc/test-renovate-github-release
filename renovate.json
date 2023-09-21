@@ -11,10 +11,4 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ],
-  "packageRules": [
-    {
-      "matchDatasources": ["github-releases"],
-      "matchDepNames": ["anchore/syft"],
-    }
-  ]
 }
